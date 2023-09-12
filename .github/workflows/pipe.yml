@@ -26,4 +26,4 @@ jobs:
 
       - name: push
         run: |
-          dotnet nuget push ./compilado/librerias-donet.1.0.1.nupkg --source https://nuget.pkg.github.com/Demo-Pemex/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
+          dotnet nuget push ./compilado/librerias-donet.1.0.2.nupkg --source https://nuget.pkg.github.com/Demo-Pemex/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
