@@ -4,8 +4,12 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>librerias_donet</RootNamespace>
+    <Version>1.0.1</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Company>COMPANY_NAME</Company>
+    <PackageDescription>Este paquete simplemente es el mejor, funciona hasta en java</PackageDescription>
+    <RepositoryUrl>https://github.com/Demo-Pemex/demo-nuget</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
