@@ -1,0 +1,29 @@
+name: publish nuget
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: restore
+        run: dotnet restore
+
+      - name: build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: publish
+        run: dotnet pack --no-build --configuration Release --output ./compilado
+
+      - name: push
+        run: |
+          dotnet nuget push ./compilado/librerias-donet.1.0.1.nupkg --source https://nuget.pkg.github.com/Demo-Pemex/index.json --api-key ${{ GITHUB_TOKEN }}
